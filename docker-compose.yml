@@ -1,0 +1,13 @@
+version: '3'
+services:
+  keyapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./KeyManagementUnitTestNuxt3:/KeyManagementUnitTestNuxt3 # 環境に合わせて変更
+      - /KeyManagementUnitTestNuxt3/node_modules # 環境に合わせて変更
+    working_dir: /KeyManagementUnitTestNuxt3 # 環境に合わせて変更
+    ports:
+      - "127.0.0.1:3000:3000" # 環境に合わせて変更
